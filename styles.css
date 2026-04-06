@@ -1,6 +1,5 @@
-/*  your css code here. If applicable */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     text-align: center;
 }
 
@@ -29,7 +28,7 @@ button {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #eee;
+    background: #eee;
     font-size: 40px;
     display: flex;
     justify-content: center;

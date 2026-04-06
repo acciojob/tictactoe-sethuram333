@@ -1,8 +1,7 @@
-//your JS code here. If required.
 let player1 = "";
 let player2 = "";
 let currentPlayer = "";
-let currentSymbol = "X";
+let currentSymbol = "x";
 let gameActive = true;
 
 const winningCombinations = [
@@ -16,13 +15,10 @@ const board = document.getElementById("board");
 const message = document.querySelector(".message");
 
 submitBtn.addEventListener("click", () => {
-    player1 = document.getElementById("player-1").value.trim();
-    player2 = document.getElementById("player-2").value.trim();
+    player1 = document.getElementById("player1").value.trim();
+    player2 = document.getElementById("player2").value.trim();
 
-    if (!player1 || !player2) {
-        alert("Please enter both player names");
-        return;
-    }
+    if (!player1 || !player2) return;
 
     document.getElementById("player-form").style.display = "none";
     board.style.display = "grid";
@@ -45,13 +41,12 @@ cells.forEach(cell => {
             return;
         }
 
-        // Switch player
         if (currentPlayer === player1) {
             currentPlayer = player2;
-            currentSymbol = "O";
+            currentSymbol = "o";
         } else {
             currentPlayer = player1;
-            currentSymbol = "X";
+            currentSymbol = "x";
         }
 
         message.textContent = `${currentPlayer}, you're up`;
